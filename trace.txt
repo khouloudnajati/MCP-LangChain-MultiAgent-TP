@@ -1,0 +1,36 @@
+--- Trace pour l'Exercice 1 : math_server.py avec inspector ---
+Outils découverts :
+- add: Additionne deux nombres et retourne la somme.
+- multiply: Multiplie deux nombres et retourne le produit.
+- divide: Divides the first number by the second number.
+
+Appels manuels :
+[math_server] add(3.0, 5.0) = 8.0
+Resultat : 8.0
+
+[math_server] multiply(7.0, 6.0) = 42.0
+Resultat : 42.0
+
+[math_server] divide(10.0, 2.0) = 5.0
+Resultat : 5.0
+
+[math_server] divide(10.0, 0.0) = Error: Division by zero is not allowed.
+Resultat : Error: Division by zero is not allowed.
+
+--- Trace pour l'Exercice 2 : math_agent.py ---
+Outils decouverts (3) : ['add', 'multiply', 'divide']
+
+Question : Calcule (17 + 23) x 4
+[math_server] add(17.0, 23.0) = 40.0
+[math_server] multiply(40.0, 4.0) = 160.0
+Reponse finale : Le résultat de (17 + 23) x 4 est 160.
+
+--- Trace pour l'Exercice 3 : dual_agent.py ---
+Outils decouverts (5) : ['get_employee', 'list_employees_by_department', 'update_salary', 'add_note', 'get_notes']
+
+Question : Recupere la fiche de E003 puis ajoute la note 'Excellent trimestre' a son dossier.
+
+[MCP] tool=get_employee args={'employee_id': 'E003'}
+[MCP] tool=add_note args={'employee_id': 'E003', 'note': 'Excellent trimestre'}
+
+Reponse finale : J'ai récupéré la fiche de Karim Bennani (département Sales) et j'ai ajouté la note "Excellent trimestre" à son dossier avec succès.
